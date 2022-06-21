@@ -1,0 +1,241 @@
+@use '../tools/global'as g;
+
+.header {
+  z-index: 10;
+}
+
+.navbar {
+  @include g.flex(space-between, center, row, nowrap);
+  height: 10vh;
+  background-color: transparent;
+  padding: 15px 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  transition: .6s;
+
+  &--sticky {
+    background-color: #fff;
+
+    & > .navbar__logo{
+      color: #000;
+    }
+
+    & > .navbar__list > .navbar__mode > .navbar__icon{
+      color: #000;
+    }
+
+    & > .navbar__list > .navbar__item > .navbar__link{
+      color: #000;
+
+      &::after {
+        background-color: g.$color-blue1;
+      }
+    }
+    
+
+  }
+
+  &__list {
+    @include g.flex(flex-end, center, row, nowrap);
+    letter-spacing: 3px;
+    font-size: .8rem;
+    z-index: 2;
+  }
+
+  &__logo {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: .6s;
+    margin-left: 50px;
+
+    & span {
+      color: g.$color-blue1;
+    }
+  }
+
+  &__item {
+    margin: 0 1.3rem;
+  }
+
+  &__mode {
+    padding: 10px;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+  }
+
+  &__icon {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: .6s;
+
+  }
+
+  &__link {
+    padding: 10px 0;
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 500;
+    position: relative;
+    transition: .6s;
+
+    &--btn {
+      font-size: .9rem;
+      font-weight: 500;
+      background-color: g.$color-blue1;
+      padding: 10px;
+      border-radius: .4rem;
+      color: #fff;
+      transition: .3s ease;
+
+      &:hover {
+        background-color: g.$color-blue3;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: #fff;
+      height: 3px;
+      width: 0;
+      left: 0;
+      bottom: 3px;
+      border-radius: 5px;
+      transition: .3s;
+    }
+
+    &:hover::after {
+      width: 90%;
+    }
+
+    &--active::after {
+      content: '';
+      position: absolute;
+      background-color: #fff;
+      height: 3px;
+      width: 90%;
+      left: 0;
+      bottom: 3px;
+      border-radius: 5px;
+      transition: .3s;
+      margin: auto;
+    }
+
+  }
+
+  &__toggle {
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
+
+    & div {
+      width: 32px;
+      height: 2px;
+      background-color: #000;
+      margin: 8px;
+      transition: .3s;
+    }
+
+    &--active .line1 {
+      transform: translate(-8px, 8px) rotate(-45deg);
+    }
+
+    &--active .line2 {
+      opacity: 0;
+
+    }
+
+    &--active .line3 {
+      transform: translate(-7px, -11px) rotate(45deg);
+    }
+  }
+
+
+
+
+}
+
+@media (max-width:1000px) {
+
+  .navbar {
+    width: 100vw;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, .3);
+    @include g.flex(space-between, center, row, wrap);
+    z-index: 2;
+    position: fixed;
+
+    &__list {
+      position: absolute;
+      top: 10vh;
+      right: 0;
+      height: 92vh;
+      width: 58vw;
+      background-color: #fff;
+      @include g.flex(space-around, center, column, nowrap);
+      // display: none;
+      transform: translateX(100%);
+      transition: .6s;
+    }
+
+    &__logo {
+      margin-left: 50px;
+      color: #000;
+      font-size: 1.4rem;
+    }
+
+    &__link {
+      color: #000;
+      font-size: 1.2rem;
+
+      &::after {
+        background-color: g.$color-blue1;
+      }
+    }
+
+    &__item {
+      opacity: 0;
+      margin-left: 0;
+    }
+
+    &__toggle {
+      display: block;
+    }
+
+    &__icon {
+      color: #000;
+      font-size: 2rem;
+    }
+
+  }
+
+}
+
+
+.navbar__list--active {
+  transform: translate(0);
+}
+
+@keyframes navItemFade {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

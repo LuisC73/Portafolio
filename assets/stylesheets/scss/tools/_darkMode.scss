@@ -1,0 +1,75 @@
+body.darkMode {
+  background-color: rgb(32, 32, 44);
+  color: #fff;
+
+  &::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, .25);
+  }
+
+ 
+
+  &>header>.navbar--sticky {
+    background-color: rgb(32, 32, 44);
+
+    &>.navbar__logo {
+      color: #fff;
+    }
+
+    & > .navbar__toggle > div{
+      background-color: #fff;
+    }
+
+    &>.navbar__list {
+      transition: 1.2s;
+      background-color: rgb(32, 32, 44);
+    }
+
+    &>.navbar__list>.navbar__item>.navbar__link,
+    &>.navbar__list>.navbar__item>.navbar__link--active,
+    &>.navbar__list>.navbar__mode>.navbar__icon {
+      color: #fff;
+    }
+
+  }
+
+  &>header>.home__container {
+    background: rgba(0, 0, 0, .25);
+    border: 1px solid rgba(0, 0, 0, .18);
+    color: #fff;
+
+    &>.home__content>.home__icons>.home__icon {
+      background-color: rgba(0, 0, 0, .25);
+      color: #fff;
+      border: 1px solid rgba(0, 0, 0, .4);
+      border-right: 1px solid rgba(0, 0, 0, .2);
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+      &>i {
+        color: #fff;
+      }
+    }
+  }
+
+  &>p,
+  h3 {
+
+    color: #fff;
+
+  }
+
+  &>main>section:nth-child(1) {
+    background-color: rgb(47, 47, 55);
+    color: #fff;
+  }
+
+  &>main>section:nth-child(3) {
+    background-color: rgb(47, 47, 55);
+    color: #fff;
+  }
+
+  &>main>.skills>.skills__container>.skills__content>.skills__arrow-left:hover,
+  &>main>.skills>.skills__container>.skills__content .skills__arrow-right:hover {
+    color: #fff;
+  }
+
+}

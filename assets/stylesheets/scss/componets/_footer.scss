@@ -1,0 +1,57 @@
+@use '../tools/global'as g;
+
+.footer {
+  padding: 2rem;
+  width: 100vw;
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 32px;
+  background-color: g.$color-blue1;
+
+  &__container {
+    max-width: 1120px;
+    padding: 0 20px;
+    margin: 0 auto;
+    @include g.flex(center, center, column, wrap);
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: .6s;
+    text-align: center;
+
+    & span {
+      color: #f1f1f1;
+    }
+  }
+
+  &__icons {
+    @include g.flex(center, center, row, nowrap);
+    padding: 1.2rem;
+
+  }
+
+  &__icon {
+    margin: 0 1rem;
+    text-align: center;
+    transition: .3s;
+    line-height: 60px;
+
+    & i {
+      font-size: 30px;
+      color: #fff;
+    }
+
+    &:hover {
+      transform: translate(0, -12px);
+    }
+  }
+
+  &__copy {
+    text-align: center;
+  }
+}

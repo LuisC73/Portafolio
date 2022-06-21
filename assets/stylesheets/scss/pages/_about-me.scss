@@ -1,0 +1,110 @@
+@use '../tools/global'as g;
+
+.about {
+  padding: 2rem;
+  background: #f1f1f1;
+  color: inherit;
+  font-size: 1.1em;
+  line-height: 32px;
+  width: 100vw;
+  @include g.flex(center, center, column, wrap);
+
+  &__container {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+
+  &__blob {
+    width: 300px;
+    fill: g.$color-blue1;
+
+    &-img {
+      width: 170px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 1.1rem;
+  }
+
+  &__title {
+    @extend .title;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: .813rem;
+    display: block;
+    margin: 10px 0 3rem 0;
+  }
+
+  &__des {
+    text-align: start;
+  }
+
+  &__text {
+    text-align: start;
+    margin-top: .7rem;
+
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__download {
+    @extend .button;
+  }
+}
+
+@media (max-width:768px) {
+  .about {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__img {
+      margin-bottom: 0;
+    }
+
+    &__subtitle {
+      font-size: 1rem;
+    }
+
+    &__des {
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    &__text {
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    &__blob {
+      width: 200px;
+    }
+
+    &__download {
+      font-size: .9rem;
+      width: 60%;
+      padding: 8px 20px;
+      font-weight: 700;
+    }
+  }
+}
