@@ -1,15 +1,14 @@
+export default function skills(rows, arrow_left, arrow_right) {
+  const $rowSkills = document.querySelector(rows);
 
-export default function skills(){
-    const rowSkills = document.querySelector(".skills__carrousel"),
-    arrowleft = document.getElementById("arrow-left"),
-    arrowRight = document.getElementById("arrow-right");
+  document.addEventListener("click", e => {
+    if (e.target.matches(arrow_right)) {
+      $rowSkills.scrollLeft += $rowSkills.offsetWidth;
+    }
 
-    arrowRight.addEventListener('click',()=>{
-        rowSkills.scrollLeft += rowSkills.offsetWidth;
-    })
+    if (e.target.matches(arrow_left)) {
+      $rowSkills.scrollLeft -= $rowSkills.offsetWidth;
+    }
+  })
 
-    arrowleft.addEventListener('click',()=>{
-        rowSkills.scrollLeft -= rowSkills.offsetWidth;
-    })
 }
-

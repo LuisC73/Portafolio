@@ -1,43 +1,43 @@
-export default function navbar(){
-    const navToggle = document.querySelector(".navbar__toggle"),
-        navList = document.querySelector('.navbar__list'),
-        navItem = document.querySelectorAll('.navbar__item'),
-        nav = document.querySelector(".navbar"),
-        navLogo = document.querySelector(".navbar__logo"),
-        navLink = document.querySelectorAll(".navbar__link"),
-        iconMode = document.querySelector(".navbar__icon");
+export function navbar(navToggle, navList, navItems) {
+  const $navToggle = document.querySelector(navToggle),
+    $navList = document.querySelector(navList),
+    $navItems = document.querySelectorAll(navItems);
 
-    navToggle.addEventListener('click', () => {
-        navList.classList.toggle("navbar__list--active");
-        navToggle.classList.toggle("navbar__toggle--active");
+    document.addEventListener('click',(e)=>{
+      if(e.target.matches(navToggle) || e.target.matches(`${navToggle} *`)){
+        $navList.classList.toggle("navbar__list--active");
+        $navToggle.classList.toggle("navbar__toggle--active");
 
-        navItem.forEach((link, index) => {
-            (link.style.animation) ?
-            link.style.animation = '': link.style.animation = `navItemFade .5s ease forwards ${index / 7 + .3}s`
+        $navItems.forEach((item, index) => {
+          (item.style.animation) ?
+          item.style.animation = '': item.style.animation = `navItemFade .5s ease forwards ${index / 7 + .3}s`
         })
+      }
     })
-
-    window.onscroll = () => {
-        if (this.scrollY > 40) {
-            nav.classList.add('navbar--sticky')
-            navLogo.classList.add('navbar__logo--sticky')
-            iconMode.classList.add('navbar__icon--sticky')
-
-            navLink.forEach(link => {
-                link.classList.add('navbar__link--sticky')
-            })
-
-        } else {
-            nav.classList.remove('navbar--sticky')
-            navLogo.classList.remove('navbar__logo--sticky')
-            iconMode.classList.remove('navbar__icon--sticky')
-
-            navLink.forEach(link => {
-                link.classList.remove('navbar__link--sticky')
-            })
-        }
-
-    }
-
 }
 
+
+export function navbarScroll(navbar, navbar__link, section) {
+
+  const $nav = document.querySelector(navbar),
+    $navLinks = document.querySelectorAll(navbar__link),
+    $sections = document.querySelectorAll(section);
+
+  window.addEventListener('scroll', () => {
+    $nav.classList.toggle('navbar--sticky', window.scrollY > 0)
+
+    $sections.forEach(section => {
+      let top = window.scrollY,
+        offset = section.offsetTop - 150,
+        height = section.offsetHeight,
+        id = section.getAttribute('id');
+
+      if (top >= offset && top < offset + height) {
+        $navLinks.forEach(link => {
+          link.classList.remove("navbar__link--active")
+          document.querySelector(`.navbar__link[href*= ${id}]`).classList.add("navbar__link--active")
+        })
+      }
+    })
+  })
+}

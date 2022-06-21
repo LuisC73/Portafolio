@@ -1,3 +1,5 @@
+@use '../tools/global'as g;
+
 body.darkMode {
   background-color: rgb(32, 32, 44);
   color: #fff;
@@ -32,6 +34,11 @@ body.darkMode {
 
   }
 
+  & > .main > .up__container{
+    background-color: #7F8487;
+    color: g.$color-blue1;
+  }
+
   &>header>.home__container {
     background: rgba(0, 0, 0, .25);
     border: 1px solid rgba(0, 0, 0, .18);
@@ -57,12 +64,12 @@ body.darkMode {
 
   }
 
-  &>main>section:nth-child(1) {
+  &>main>section:nth-child(2) {
     background-color: rgb(47, 47, 55);
     color: #fff;
   }
 
-  &>main>section:nth-child(3) {
+  &>main>section:nth-child(4) {
     background-color: rgb(47, 47, 55);
     color: #fff;
   }
