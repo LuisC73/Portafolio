@@ -197,6 +197,7 @@ body::-webkit-scrollbar-thumb {
 }
 .navbar__logo span {
   color: #1363DF;
+  text-shadow: 5px 10px 20px black;
 }
 .navbar__item {
   margin: 0 1.3rem;
@@ -321,6 +322,9 @@ body::-webkit-scrollbar-thumb {
   .navbar__link::after {
     background-color: #1363DF;
   }
+  .navbar__link--btn {
+    font-size: 1.2rem;
+  }
   .navbar__item {
     opacity: 0;
     margin-left: 0;
@@ -331,6 +335,14 @@ body::-webkit-scrollbar-thumb {
   .navbar__icon {
     color: #000;
     font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .navbar__list {
+    width: 100vw;
+  }
+  .navbar__logo {
+    font-size: 1.2rem;
   }
 }
 .navbar__list--active {
@@ -383,6 +395,7 @@ body::-webkit-scrollbar-thumb {
 }
 .home__title span {
   color: #1363DF;
+  text-shadow: 5px 10px 20px black;
 }
 .home__title--span {
   color: #000;
@@ -431,7 +444,7 @@ body::-webkit-scrollbar-thumb {
   .home__container {
     width: 80%;
     height: initial;
-    min-height: 30em;
+    min-height: 40em;
     top: 20%;
     left: 10%;
     border-radius: 15px;
@@ -442,16 +455,35 @@ body::-webkit-scrollbar-thumb {
   }
   .home__title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   .home__subtitle {
     text-align: center;
+    font-size: 2.1rem;
+    margin: 40px 10px 10px 10px;
   }
   .home__icons {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+  }
+}
+@media (max-width: 500px) {
+  .home__container {
+    width: 80%;
+    height: initial;
+    min-height: 20em;
+    top: 20%;
+    left: 10%;
+    border-radius: 15px;
+  }
+  .home__title {
+    font-size: 1.4rem;
+    margin: 0 20px;
+  }
+  .home__subtitle {
+    font-size: 1.25rem;
   }
 }
 .about {
@@ -522,17 +554,17 @@ body::-webkit-scrollbar-thumb {
   }
   .about__des {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
   .about__text {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
   }
   .about__blob {
     width: 200px;
   }
   .about__download {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     width: 60%;
     padding: 8px 20px;
     font-weight: 700;
@@ -571,6 +603,7 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
   z-index: 500;
   transition: 0.6s ease;
+  outline: none;
 }
 .skills__arrow-left:hover, .skills__arrow-right:hover {
   color: #000;
@@ -794,7 +827,7 @@ body::-webkit-scrollbar-thumb {
     width: 250px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .portafolio__gallery {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -901,6 +934,45 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
 }
 
+.up__container {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  background-color: #1363DF;
+  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  transform: scale(0);
+}
+.up__container:hover {
+  transform: translate(0, -15px);
+}
+
+@keyframes popUp {
+  0% {
+    width: 0rem;
+    height: 0rem;
+  }
+  50% {
+    width: 8rem;
+    height: 8rem;
+  }
+  100% {
+    width: 6.6rem;
+    height: 6.6rem;
+  }
+}
 body.darkMode {
   background-color: rgb(32, 32, 44);
   color: #fff;
@@ -957,46 +1029,6 @@ body.darkMode > main > section:nth-child(4) {
 }
 body.darkMode > main > .skills > .skills__container > .skills__content > .skills__arrow-left:hover, body.darkMode > main > .skills > .skills__container > .skills__content .skills__arrow-right:hover {
   color: #fff;
-}
-
-.up__container {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  width: 60px;
-  height: 60px;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column nowrap;
-  background-color: #1363DF;
-  box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
-  text-align: center;
-  transition: 0.3s;
-  transform: scale(0);
-}
-.up__container:hover {
-  transform: translate(0, -15px);
-}
-
-@keyframes popUp {
-  0% {
-    width: 0rem;
-    height: 0rem;
-  }
-  50% {
-    width: 8rem;
-    height: 8rem;
-  }
-  100% {
-    width: 6.6rem;
-    height: 6.6rem;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

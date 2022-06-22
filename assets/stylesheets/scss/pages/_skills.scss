@@ -41,6 +41,7 @@
     cursor: pointer;
     z-index: 500;
     transition: .6s ease;
+    outline: none;
 
     &:hover {
       color: #000;

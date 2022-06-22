@@ -21,6 +21,7 @@
 
     & > .navbar__logo{
       color: #000;
+      
     }
 
     & > .navbar__list > .navbar__mode > .navbar__icon{
@@ -56,6 +57,7 @@
 
     & span {
       color: g.$color-blue1;
+      text-shadow: 5px 10px 20px black;
     }
   }
 
@@ -160,11 +162,8 @@
       transform: translate(-7px, -11px) rotate(45deg);
     }
   }
-
-
-
-
 }
+
 
 @media (max-width:1000px) {
 
@@ -203,6 +202,10 @@
       &::after {
         background-color: g.$color-blue1;
       }
+
+      &--btn{
+        font-size: 1.2rem;
+      }
     }
 
     &__item {
@@ -223,6 +226,18 @@
 
 }
 
+@media (max-width:500px){
+  .navbar {
+ 
+    &__list {
+      width: 100vw;
+    }
+
+    &__logo{
+      font-size: 1.2rem;
+    }
+    }
+}
 
 .navbar__list--active {
   transform: translate(0);

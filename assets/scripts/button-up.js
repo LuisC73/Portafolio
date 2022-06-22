@@ -1,5 +1,5 @@
 export default function buttonUp(btn){
-    const btnScroll = document.querySelector(btn);
+    const btnScroll = document.querySelector(".up__container");
   
 
     document.addEventListener("click",e =>{
