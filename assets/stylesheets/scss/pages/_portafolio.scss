@@ -38,16 +38,17 @@
     font-size: 1.1rem;
     padding: 6px 25px;
     border-radius: .4rem;
-    transition: .3s;
     margin: 1rem;
     cursor: pointer;
     letter-spacing: 1px;
     color: #828282;
+    transition: .3s;
+    background: transparent;
+    font-weight: 300;
 
     &:hover {
       color: #fff;
-      background-color: g.$color-blue1;
-      transform: translateY(-10px);
+      background-color: g.$color-blue1 ;
     }
 
   }

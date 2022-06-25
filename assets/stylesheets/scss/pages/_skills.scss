@@ -157,3 +157,20 @@
     }
   }
 }
+
+
+@media (max-width:450px) {
+  .skills {
+
+    &__content{
+      width: 50vw;
+    }
+    &__carrousel {
+      
+
+      &__container {
+        margin: 0 auto;
+      }
+    }
+  }
+}
