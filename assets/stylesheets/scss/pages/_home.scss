@@ -69,7 +69,7 @@
 
   &__icon {
     padding: 12px 25px;
-    width: 28%;
+    width: max-content;
     height: max-content;
     background-color: g.$color-blue1;
     border-radius: .4rem;
@@ -183,5 +183,8 @@
       font-size: 1.3rem;
     }
 
+    &__icon{
+      width: max-content;
+    }
   }
 }

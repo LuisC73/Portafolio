@@ -95,7 +95,7 @@
 
     &--btn {
       font-size: .9rem;
-      font-weight: 700;
+      font-weight: 500;
       background-color: g.$color-blue1;
       padding: 10px;
       border-radius: .4rem;
@@ -163,6 +163,18 @@
     &--active .line3 {
       transform: translate(-7px, -11px) rotate(45deg);
     }
+  }
+}
+
+@keyframes navItemFade {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
   }
 }
 
@@ -261,7 +273,7 @@
 
     &__logo {
       font-size: 1rem;
-     
+
     }
   }
 }
@@ -269,11 +281,12 @@
 @media (max-width:400px) {
   .navbar {
     min-height: 12vh;
+
     &__logo {
       font-size: 1rem;
-     
+
     }
-    
+
     &__toggle {
       display: block;
       margin: 0 auto;
@@ -303,16 +316,4 @@
 
 .navbar__list--active {
   transform: translate(0);
-}
-
-@keyframes navItemFade {
-  from {
-    opacity: 0;
-    transform: translateX(70px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
 }
