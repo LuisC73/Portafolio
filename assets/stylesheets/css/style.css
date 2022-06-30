@@ -954,6 +954,10 @@ body::-webkit-scrollbar-thumb {
 .contact__input:hover {
   border: 2px solid #9DD6DF;
 }
+.contact__submit {
+  Cursor: pointer;
+}
+
 .footer {
   padding: 2rem;
   width: 100vw;
