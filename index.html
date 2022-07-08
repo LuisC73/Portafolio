@@ -244,15 +244,15 @@
     </section>
 
     <section class="contact" id="contact">
-      <form class="contact__container" data-aos="fade-up">
+      <form class="contact__container" data-aos="fade-up" name="contact" method="POST" data-netlify="true">
         <h2 class="contact__title">Contactame</h2>
         <div class="contact__content">
           <label class="contact__label" for="nombre">Nombre</label>
-          <input type="text" class="contact__input" id="nombre">
+          <input type="text" class="contact__input" id="nombre" name="name">
           <label class="contact__label" for="correo">Correo</label>
-          <input type="email" class="contact__input" id="correo">
+          <input type="email" class="contact__input" id="correo" name="email">
           <label class="contact__label" for="mensaje">Mensaje</label>
-          <textarea class="contact__input contact__input--message" id="mensaje"></textarea>
+          <textarea class="contact__input contact__input--message" id="mensaje" name="message"></textarea>
 
           <input type="submit" value="Enviar" class="contact__submit">
         </div>
