@@ -1,4 +1,5 @@
-@use '../tools/global'as g;
+@use '../_layout/vars' as vars;
+@use '../_layout/mixins' as mixin;
 
 body.darkMode {
   background-color: rgb(32, 32, 44);
@@ -36,7 +37,7 @@ body.darkMode {
 
   & > .main > .up__container{
     background-color: #7F8487;
-    color: g.$color-blue1;
+    color: vars.$color-blue1;
   }
 
   &>header>.home__container {

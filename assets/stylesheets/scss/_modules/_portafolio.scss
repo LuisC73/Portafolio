@@ -1,9 +1,11 @@
-@use '../tools/global'as g;
+@use '../_layout/vars' as vars;
+@use '../_layout/mixins' as mixin;
+@use '../_layout/layouts';
 
 .portafolio {
   padding: 2rem;
   width: 100vw;
-  color: g.$color-font;
+  color: vars.$color-font;
   font-size: 1.1em;
   line-height: 32px;
   background: #f1f1f1;
@@ -26,11 +28,11 @@
 
   &__content {
     margin-top: 3rem;
-    @include g.flex(center, center, column, nowrap);
+    @include mixin.flex(center, center, column, nowrap);
   }
 
   &__categories {
-    @include g.flex(center, center, row, wrap);
+    @include mixin.flex(center, center, row, wrap);
     margin-bottom: 1rem;
   }
 
@@ -48,7 +50,7 @@
 
     &:hover {
       color: #fff;
-      background-color: g.$color-blue1 ;
+      background-color: vars.$color-blue1 ;
     }
 
   }
@@ -56,7 +58,7 @@
   &--active {
     color: #fff;
     font-weight: 700;
-    background-color: g.$color-blue1;
+    background-color: vars.$color-blue1;
   }
 
   &__gallery {
@@ -144,7 +146,7 @@
     }
 
     & a {
-      background: g.$color-blue1;
+      background: vars.$color-blue1;
       display: inline-block;
       border-radius: .4rem;
       padding: 5px 15px;
@@ -153,7 +155,7 @@
       margin: auto 10px;
 
       &:hover {
-        background-color: g.$color-blue3;
+        background-color: vars.$color-blue3;
         transform: translateY(-5px);
       }
     }

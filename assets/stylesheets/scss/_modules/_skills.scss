@@ -1,4 +1,6 @@
-@use '../tools/global'as g;
+@use '../_layout/vars' as vars;
+@use '../_layout/mixins' as mixin;
+@use '../_layout/layouts';
 
 .skills {
   padding: 2rem;
@@ -37,7 +39,7 @@
     top: calc(50% - 25%);
     line-height: 40px;
     width: 5%;
-    color: g.$color-blue1;
+    color: vars.$color-blue1;
     cursor: pointer;
     z-index: 500;
     transition: .6s ease;
@@ -71,7 +73,7 @@
 
 
   &__info {
-    @include g.flex(center, center, column, nowrap);
+    @include mixin.flex(center, center, column, nowrap);
     padding: .5rem;
     min-width: 20%;
     transition: .3s ease;
@@ -90,7 +92,7 @@
 
   &__icon {
     width: 75px;
-    fill: g.$color-blue1;
+    fill: vars.$color-blue1;
 
     &:active {
       transform: scale(1.2);

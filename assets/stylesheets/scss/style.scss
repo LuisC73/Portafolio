@@ -1,12 +1,13 @@
 
-@forward './tools/reset';
-@forward './componets/navbar';
-@forward './pages/home';
-@forward './pages/about-me';
-@forward './pages/skills';
-@forward './pages/portafolio';
-@forward './pages/contact';
-@forward './componets/footer';
-@forward './componets/button-up';
-@forward './tools/darkMode';
-@forward './tools/responsive';
+@forward './_base/reset';
+@forward './_modules/navbar';
+@forward './_modules/home';
+@forward './_modules/about-me';
+@forward './_modules/skills';
+@forward './_modules/portafolio';
+@forward './_modules/contact';
+@forward './_modules/footer';
+@forward './_modules/button-up';
+@forward './_other/darkMode';
+
+

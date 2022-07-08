@@ -1,4 +1,5 @@
-@use '../tools/global'as g;
+@use '../_layout/vars' as vars;
+@use '../_layout/mixins' as mixin;
 
 .up {
     &__container {
@@ -10,8 +11,8 @@
         color: #fff;
         border-radius: 50%;
         font-size: 2.5rem;
-        @include g.flex(center, center, column, nowrap);
-        background-color: g.$color-blue1;
+        @include mixin.flex(center, center, column, nowrap);
+        background-color: vars.$color-blue1;
         box-shadow: 0 5px 45px rgba(0, 0, 0, .1);
         border-radius: 50%;
         cursor: pointer;

@@ -1,11 +1,13 @@
-@use '../tools/global'as g;
+@use '../_layout/vars' as vars;
+@use '../_layout/mixins' as mixin;
+
 
 .header {
   z-index: 10;
 }
 
 .navbar {
-  @include g.flex(space-between, center, row, nowrap);
+  @include mixin.flex(space-between, center, row, nowrap);
   height: 10vh;
   background-color: transparent;
   padding: 15px 0px;
@@ -33,7 +35,7 @@
       color: #000;
 
       &::after {
-        background-color: g.$color-blue1;
+        background-color: vars.$color-blue1;
       }
     }
 
@@ -41,7 +43,7 @@
   }
 
   &__list {
-    @include g.flex(flex-end, center, row, nowrap);
+    @include mixin.flex(flex-end, center, row, nowrap);
     letter-spacing: 3px;
     font-size: .8rem;
     z-index: 2;
@@ -57,7 +59,7 @@
     margin-left: 50px;
 
     & span {
-      color: g.$color-blue4;
+      color: vars.$color-blue4;
       text-shadow: 5px 10px 20px black;
     }
   }
@@ -96,14 +98,14 @@
     &--btn {
       font-size: .9rem;
       font-weight: 500;
-      background-color: g.$color-blue1;
+      background-color: vars.$color-blue1;
       padding: 10px;
       border-radius: .4rem;
       color: #fff;
       transition: .3s ease;
 
       &:hover {
-        background-color: g.$color-blue3;
+        background-color: vars.$color-blue3;
       }
     }
 
@@ -187,7 +189,7 @@
     margin: 0 auto;
     background-color: #fff;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, .3);
-    @include g.flex(space-between, center, row, wrap);
+    @include mixin.flex(space-between, center, row, wrap);
     z-index: 2;
     position: fixed;
 
@@ -198,7 +200,7 @@
       height: 92vh;
       width: 58vw;
       background-color: #fff;
-      @include g.flex(space-around, center, column, nowrap);
+      @include mixin.flex(space-around, center, column, nowrap);
       transform: translateX(100%);
       transition: .6s;
     }
@@ -214,7 +216,7 @@
       font-size: 1.2rem;
 
       &::after {
-        background-color: g.$color-blue1;
+        background-color: vars.$color-blue1;
       }
 
       &--btn {

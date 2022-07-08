@@ -1,4 +1,6 @@
-@use '../tools/global'as g;
+@use '../_layout/vars' as vars;
+@use '../_layout/mixins' as mixin;
+@use '../_layout/layouts';
 
 .about {
   padding: 2rem;
@@ -7,7 +9,7 @@
   font-size: 1.1em;
   line-height: 32px;
   width: 100vw;
-  @include g.flex(center, center, column, wrap);
+  @include mixin.flex(center, center, column, wrap);
 
   &__container {
     width: 100%;
@@ -32,7 +34,7 @@
 
   &__blob {
     width: 300px;
-    fill: g.$color-blue1;
+    fill: vars.$color-blue1;
 
     &-img {
       width: 170px;

@@ -1,4 +1,4 @@
-@use '../tools/global'as g;
+@use '../_layout/vars'as vars;
 
 * {
   margin: 0;
@@ -16,9 +16,9 @@ body {
   min-height: 100%;
   font-size: 100%;
   overflow-x: hidden;
-  font-family: g.$font-principal;
+  font-family: vars.$font-principal;
   line-height: 1.4em;
-  color: g.$color-font;
+  color: vars.$color-font;
 }
 
 img,
@@ -68,7 +68,7 @@ em {
 }
 
 ::selection {
-  background-color: g.$color-blue1;
+  background-color: vars.$color-blue1;
   color: #fff;
 }
 
@@ -105,6 +105,6 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: g.$color-blue1;
+  background: vars.$color-blue1;
   border-radius: 10px;
 }

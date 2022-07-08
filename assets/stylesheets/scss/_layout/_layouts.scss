@@ -1,0 +1,41 @@
+@use './vars' as vars;
+
+.title {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 140px;
+    height: .18rem;
+    left: 0;
+    right: 0;
+    margin: 5px auto;
+    top: 2rem;
+    border-radius: 5px;
+    background-color: vars.$color-blue1;
+  }
+
+  &--dark {
+    color: #fff;
+  }
+}
+
+.button {
+  padding: 10px 25px;
+  background-color: vars.$color-blue1;
+  border-radius: .4rem;
+  width: 40%;
+  color: #fff;
+  margin: 2rem auto;
+  transition: .3s;
+  text-align: center;
+
+  &:hover {
+    background-color: vars.$color-blue3;
+    transform: translateY(-15px);
+  }
+}

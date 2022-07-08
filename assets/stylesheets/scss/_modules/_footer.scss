@@ -1,4 +1,5 @@
-@use '../tools/global'as g;
+@use '../_layout/vars' as vars;
+@use '../_layout/mixins' as mixin;
 
 .footer {
   padding: 2rem;
@@ -6,13 +7,13 @@
   color: #fff;
   font-size: 1.1em;
   line-height: 32px;
-  background-color: g.$color-blue1;
+  background-color: vars.$color-blue1;
 
   &__container {
     max-width: 1120px;
     padding: 0 20px;
     margin: 0 auto;
-    @include g.flex(center, center, column, wrap);
+    @include mixin.flex(center, center, column, wrap);
   }
 
   &__title {
@@ -30,7 +31,7 @@
   }
 
   &__icons {
-    @include g.flex(center, center, row, nowrap);
+    @include mixin.flex(center, center, row, nowrap);
     padding: 1.2rem;
 
   }
