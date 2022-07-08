@@ -1,7 +1,6 @@
 # Portafolio
 
-<h1 align="center">{Your project name}</h1>
-
+<h1 align="center">{Mi Portafolio}</h1>
 
 <div align="center">
   <h3>
@@ -19,25 +18,16 @@
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-- [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [Html]
+- [Scss]
+- [JavaScript]
 
 
 ## How To Use
 
-<!-- Example: -->
-
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/LuisC73/Portafolio.git
 
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
 ```
 
