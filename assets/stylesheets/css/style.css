@@ -956,6 +956,7 @@ body::-webkit-scrollbar-thumb {
 }
 .contact__submit {
   Cursor: pointer;
+  text-align: center;
 }
 
 .footer {
@@ -1031,6 +1032,7 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   transition: 0.3s;
   transform: scale(0);
+  z-index: 99;
 }
 .up__container:hover {
   transform: translate(0, -15px);
