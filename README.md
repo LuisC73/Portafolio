@@ -1,10 +1,10 @@
 
-<h1 align="center">{Mi Portafolio}</h1>
+<h1 align="center">Mi Portafolio</h1>
 
 <div align="center">
   <h3>
     <a href="https://portafolioluismc.netlify.app/">
-      Demo
+      Ingresar
     </a>
   </h3>
 </div>
@@ -14,8 +14,6 @@
 ![me](https://user-images.githubusercontent.com/80079884/178081932-5b4093f8-60ea-467f-ae86-69ee60a70006.jpg)
 
 ### Built With
-
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [Html]
 - [Scss]
