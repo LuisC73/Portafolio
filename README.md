@@ -19,6 +19,10 @@
 - [Scss]
 - [JavaScript]
 
+### About
+
+- Portafolio diseñado con scss utilizando la metodoliga BEM para la nomenclatura de las clases y la metodologia OOCSS para la organizacion de carpetas. Ademas de modulos en JavaScript para separar en diferentes archivos js el codigo dependiendo de su funcion para luego utilizar la delegación de eventos para mejor funcionamiento.
+
 
 ## How To Use
 
